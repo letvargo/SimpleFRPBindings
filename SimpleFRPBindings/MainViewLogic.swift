@@ -48,23 +48,27 @@ final class MainViewLogic {
     // all possible nibs have been initialized. The wire() method contains all of the
     // logic for the view controller. It is totally referentially transparent and causes
     // no side effects other than those specifically called by the two Outlets.
+    
     private func wire() {
         
         // Lift srcLightSwitch into a Cell, transforming the Int value
         // of the button state into a Bool value
+        
         srcLightSwitch
             --^ (cLightsOn, buttonStateToBool)
         
         // Lift srcAtHome into a Cell, transforming the Int value of
         // the button state into a Bool and then attach an Outlet that
         // will disable the light switch when no one is home.
+        
         srcAtHome
             --^ (cAtHome, buttonStateToBool)
                 --< (oEnableLights, controller.setLightsEnabled)
         
-        // Merge the three sources into a single Cell that will store
-        // a Bool value that defines whether the message should be shown
-        // or not.
+        // Merge the three sources into a single Cell after mapping them
+        // all to Stream<Bool>. The Cell will store the most recent Bool
+        // value that will define whether the message should be shown or not.
+        
         [
             srcKnock
                 >-- (sKnockToShow, returnShow),
@@ -78,6 +82,7 @@ final class MainViewLogic {
         // Compute the String value of the message based on the values
         // stored in the three cells, and then attach an Outlet to
         // actually show the correct message on the label.
+        
         (
             cShouldShowMessage,
             cAtHome,
@@ -93,15 +98,13 @@ final class MainViewLogic {
 // guaranteed that there will be no reference to any local state -
 // they operate on nothing other than the arguments passed to them.
 
-private let returnShow: MainViewLogic.Knock -> Bool = { _ in return true }
-private let returnHide: Int -> Bool                 = { _ in return false }
+private let returnShow: MainViewLogic.Knock -> Bool = { _ in true }
+private let returnHide: Int -> Bool                 = { _ in false }
 
 private func buttonStateToBool(state: Int) -> Bool {
-    if state == 1 {
-        return true
-    } else {
-        return false
-    }
+    return state == NSOnState
+        ? true
+        : false
 }
 
 private func messageToShow(shouldShow: Bool, atHome: Bool, lightsOn: Bool) -> String {
