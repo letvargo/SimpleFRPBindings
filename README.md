@@ -3,7 +3,7 @@ Binding UI Elements with SimpleSwiftFRP
 
 This is an example project that demonstrates how to use `SimpleSwiftFRP` as a substitute for traditional Cocoa bindings. It also demonstrates fairly clearly how `SimpleSwiftFRP` can help separate program logic from program state.
 
-The application itself is nothing special. You knock by pressing a button. If noone is home, you get no response. If someone is home and the lights are off, you are told to go away. If Someone is home and the lights are on, you are welcomed. The light switch is disabled when noone is home (cuz there's no one there to turn it on or off, right?), and the message is cleared with any action other than knocking, which causes the message to be shown.
+The application itself is nothing special. You knock by pressing a button. If no one is home, you get no response. If someone is home and the lights are off, you are told to go away. If someone is home and the lights are on, you are welcomed. The light switch is disabled when no one is home (cuz there's no one there to turn it on or off, right?), and the message is cleared with any action other than knocking, which causes the message to be shown.
 
 Like I said, there's not a lot to it, but it provides a simple example of how the logic behind a user interface can be separated out from the state of the user interface, resulting in code that is clear, modular, and easily extendable.
 
