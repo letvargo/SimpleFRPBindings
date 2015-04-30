@@ -8,43 +8,63 @@
 
 import SimpleSwiftFRP
 
-class MainViewLogic {
+final class MainViewLogic {
     
-    enum Knock {
-        case Knock
-    }
+    // A single-case enum that represents a knock on the door.
+    enum Knock { case Knock }
     
-    let controller: MainViewController
+    // An unowned reference to the view controller
+    private unowned var controller: MainViewController
     
-    let srcKnock = Source<Knock>()
-    let srcLightSwitch = Source<Int>()
-    let srcAtHome = Source<Int>()
+    // Declare and initialice the Sources. Note that there is one
+    // Source for each control that will be sending a value.
+    let srcKnock                    = Source<Knock>()
+    let srcLightSwitch              = Source<Int>()
+    let srcAtHome                   = Source<Int>()
     
-    let sKnockToShow = Stream<Bool>()
-    let sLightToHide = Stream<Bool>()
-    let sAtHomeToHide = Stream<Bool>()
+    // Declare and initialize the Streams
+    private let sKnockToShow        = Stream<Bool>()
+    private let sLightToHide        = Stream<Bool>()
+    private let sAtHomeToHide       = Stream<Bool>()
     
-    let cAtHome: Cell<Bool> = Cell(initialValue: true)
-    let cLightsOn: Cell<Bool> = Cell(initialValue: false)
-    let cShouldShowMessage: Cell<Bool> = Cell(initialValue: false)
-    let cMessage: Cell<String> = Cell(initialValue: "")
+    // Declare and initialize the Cells
+    private let cAtHome             = Cell(initialValue: true)
+    private let cLightsOn           = Cell(initialValue: false)
+    private let cShouldShowMessage  = Cell(initialValue: false)
+    private let cMessage            = Cell(initialValue: "")
     
-    let oEnableLights = Outlet<Bool>()
-    let oSetMessage = Outlet<String>()
+    // Declare and initialize the Outlets
+    private let oEnableLights       = Outlet<Bool>()
+    private let oSetMessage         = Outlet<String>()
     
+    // The init method
     init(controller: MainViewController) {
         self.controller = controller
+        wire()
     }
     
-    func wire() {
+    // The wire() method connects all of the Sources, Streams, Cells, and Outlets together.
+    // It is called by the view controller in its awakeFromNib() method, after
+    // all possible nibs have been initialized. The wire() method contains all of the
+    // logic for the view controller. It is totally referentially transparent and causes
+    // no side effects other than those specifically called by the two Outlets.
+    private func wire() {
         
+        // Lift srcLightSwitch into a Cell, transforming the Int value
+        // of the button state into a Bool value
         srcLightSwitch
             --^ (cLightsOn, buttonStateToBool)
         
+        // Lift srcAtHome into a Cell, transforming the Int value of
+        // the button state into a Bool and then attach an Outlet that
+        // will disable the light switch when no one is home.
         srcAtHome
             --^ (cAtHome, buttonStateToBool)
-            --< (oEnableLights, controller.setLightsEnabled)
+                --< (oEnableLights, controller.setLightsEnabled)
         
+        // Merge the three sources into a single Cell that will store
+        // a Bool value that defines whether the message should be shown
+        // or not.
         [
             srcKnock
                 >-- (sKnockToShow, returnShow),
@@ -53,20 +73,28 @@ class MainViewLogic {
             srcAtHome
                 >-- (sAtHomeToHide, returnHide)
         ]
-                --& cShouldShowMessage
+                    --& cShouldShowMessage
         
+        // Compute the String value of the message based on the values
+        // stored in the three cells, and then attach an Outlet to
+        // actually show the correct message on the label.
         (
             cShouldShowMessage,
             cAtHome,
             cLightsOn
         )
-            --^ (cMessage, messageToShow)
-            --< (oSetMessage, controller.setMessage)
+                --^ (cMessage, messageToShow)
+                    --< (oSetMessage, controller.setMessage)
     }
 }
 
+// The closures and functions defined below are used inside the wire() method.
+// By declaring them outside of the class and marking them private we are
+// guaranteed that there will be no reference to any local state -
+// they operate on nothing other than the arguments passed to them.
+
 private let returnShow: MainViewLogic.Knock -> Bool = { _ in return true }
-private let returnHide: Int -> Bool = { _ in return false }
+private let returnHide: Int -> Bool                 = { _ in return false }
 
 private func buttonStateToBool(state: Int) -> Bool {
     if state == 1 {

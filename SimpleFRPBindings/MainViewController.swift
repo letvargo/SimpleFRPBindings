@@ -9,7 +9,7 @@
 import Cocoa
 
 @NSApplicationMain
-class MainViewController: NSViewController, NSApplicationDelegate {
+final class MainViewController: NSViewController, NSApplicationDelegate {
     
     @IBOutlet weak var lightSwitch: NSButton!
     @IBOutlet weak var messageLabel: NSTextField!
@@ -17,10 +17,6 @@ class MainViewController: NSViewController, NSApplicationDelegate {
     lazy var logic: MainViewLogic = {
         return MainViewLogic(controller: self)
     }()
-    
-    override func awakeFromNib() {
-        logic.wire()
-    }
     
     @IBAction func sendAtHome(sender: AnyObject) {
         logic.srcAtHome.send(sender.state)
