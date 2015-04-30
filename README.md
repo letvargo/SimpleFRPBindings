@@ -26,10 +26,6 @@ This is the entire `MainViewController` file:
         lazy var logic: MainViewLogic = {
             return MainViewLogic(controller: self)
         }()
-    
-        override func awakeFromNib() {
-            logic.wire()
-        }
         
         @IBAction func sendAtHome(sender: AnyObject) {
             logic.srcAtHome.send(sender.state)
