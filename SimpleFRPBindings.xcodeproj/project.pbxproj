@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8B8B53411AF1FC5800108D11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8B53401AF1FC5800108D11 /* AppDelegate.swift */; };
 		8B8B53431AF1FC5800108D11 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B8B53421AF1FC5800108D11 /* Images.xcassets */; };
-		8B8B53461AF1FC5800108D11 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B8B53441AF1FC5800108D11 /* MainMenu.xib */; };
 		8B8B53521AF1FC5900108D11 /* SimpleFRPBindingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8B53511AF1FC5900108D11 /* SimpleFRPBindingsTests.swift */; };
+		8B8B535E1AF1FCBC00108D11 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B8B535B1AF1FCBC00108D11 /* MainMenu.xib */; };
+		8B8B535F1AF1FCBC00108D11 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8B535C1AF1FCBC00108D11 /* MainViewController.swift */; };
+		8B8B53601AF1FCBC00108D11 /* MainViewLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8B535D1AF1FCBC00108D11 /* MainViewLogic.swift */; };
+		8B8B536A1AF1FD5900108D11 /* SimpleSwiftFRP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8B53671AF1FD5200108D11 /* SimpleSwiftFRP.framework */; };
+		8B8B536B1AF1FD5900108D11 /* SimpleSwiftFRP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8B53671AF1FD5200108D11 /* SimpleSwiftFRP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -21,17 +24,54 @@
 			remoteGlobalIDString = 8B8B533A1AF1FC5800108D11;
 			remoteInfo = SimpleFRPBindings;
 		};
+		8B8B53661AF1FD5200108D11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B8B53611AF1FD5200108D11 /* SimpleSwiftFRP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8BB3E6CA1AD6232A00E90CFF;
+			remoteInfo = SimpleSwiftFRP;
+		};
+		8B8B53681AF1FD5200108D11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B8B53611AF1FD5200108D11 /* SimpleSwiftFRP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8BB3E6D51AD6232B00E90CFF;
+			remoteInfo = SimpleSwiftFRPTests;
+		};
+		8B8B536C1AF1FD5900108D11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B8B53611AF1FD5200108D11 /* SimpleSwiftFRP.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8BB3E6C91AD6232A00E90CFF;
+			remoteInfo = SimpleSwiftFRP;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8B8B536E1AF1FD5A00108D11 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8B8B536B1AF1FD5900108D11 /* SimpleSwiftFRP.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8B8B533B1AF1FC5800108D11 /* SimpleFRPBindings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleFRPBindings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B8B533F1AF1FC5800108D11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8B8B53401AF1FC5800108D11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B8B53421AF1FC5800108D11 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		8B8B53451AF1FC5800108D11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		8B8B534B1AF1FC5800108D11 /* SimpleFRPBindingsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleFRPBindingsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B8B53501AF1FC5800108D11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B8B53511AF1FC5900108D11 /* SimpleFRPBindingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFRPBindingsTests.swift; sourceTree = "<group>"; };
+		8B8B535B1AF1FCBC00108D11 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		8B8B535C1AF1FCBC00108D11 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8B8B535D1AF1FCBC00108D11 /* MainViewLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewLogic.swift; sourceTree = "<group>"; };
+		8B8B53611AF1FD5200108D11 /* SimpleSwiftFRP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SimpleSwiftFRP.xcodeproj; path = ../SimpleSwiftFRP/SimpleSwiftFRP.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B8B536A1AF1FD5900108D11 /* SimpleSwiftFRP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +96,7 @@
 		8B8B53321AF1FC5800108D11 = {
 			isa = PBXGroup;
 			children = (
+				8B8B53611AF1FD5200108D11 /* SimpleSwiftFRP.xcodeproj */,
 				8B8B533D1AF1FC5800108D11 /* SimpleFRPBindings */,
 				8B8B534E1AF1FC5800108D11 /* SimpleFRPBindingsTests */,
 				8B8B533C1AF1FC5800108D11 /* Products */,
@@ -73,9 +115,10 @@
 		8B8B533D1AF1FC5800108D11 /* SimpleFRPBindings */ = {
 			isa = PBXGroup;
 			children = (
-				8B8B53401AF1FC5800108D11 /* AppDelegate.swift */,
+				8B8B535C1AF1FCBC00108D11 /* MainViewController.swift */,
+				8B8B535D1AF1FCBC00108D11 /* MainViewLogic.swift */,
+				8B8B535B1AF1FCBC00108D11 /* MainMenu.xib */,
 				8B8B53421AF1FC5800108D11 /* Images.xcassets */,
-				8B8B53441AF1FC5800108D11 /* MainMenu.xib */,
 				8B8B533E1AF1FC5800108D11 /* Supporting Files */,
 			);
 			path = SimpleFRPBindings;
@@ -106,6 +149,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8B8B53621AF1FD5200108D11 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B8B53671AF1FD5200108D11 /* SimpleSwiftFRP.framework */,
+				8B8B53691AF1FD5200108D11 /* SimpleSwiftFRPTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -116,10 +168,12 @@
 				8B8B53371AF1FC5800108D11 /* Sources */,
 				8B8B53381AF1FC5800108D11 /* Frameworks */,
 				8B8B53391AF1FC5800108D11 /* Resources */,
+				8B8B536E1AF1FD5A00108D11 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8B8B536D1AF1FD5900108D11 /* PBXTargetDependency */,
 			);
 			name = SimpleFRPBindings;
 			productName = SimpleFRPBindings;
@@ -173,6 +227,12 @@
 			mainGroup = 8B8B53321AF1FC5800108D11;
 			productRefGroup = 8B8B533C1AF1FC5800108D11 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8B8B53621AF1FD5200108D11 /* Products */;
+					ProjectRef = 8B8B53611AF1FD5200108D11 /* SimpleSwiftFRP.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8B8B533A1AF1FC5800108D11 /* SimpleFRPBindings */,
@@ -181,13 +241,30 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		8B8B53671AF1FD5200108D11 /* SimpleSwiftFRP.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SimpleSwiftFRP.framework;
+			remoteRef = 8B8B53661AF1FD5200108D11 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8B8B53691AF1FD5200108D11 /* SimpleSwiftFRPTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SimpleSwiftFRPTests.xctest;
+			remoteRef = 8B8B53681AF1FD5200108D11 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		8B8B53391AF1FC5800108D11 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8B8B53431AF1FC5800108D11 /* Images.xcassets in Resources */,
-				8B8B53461AF1FC5800108D11 /* MainMenu.xib in Resources */,
+				8B8B535E1AF1FCBC00108D11 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +282,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B8B53411AF1FC5800108D11 /* AppDelegate.swift in Sources */,
+				8B8B53601AF1FCBC00108D11 /* MainViewLogic.swift in Sources */,
+				8B8B535F1AF1FCBC00108D11 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,18 +303,12 @@
 			target = 8B8B533A1AF1FC5800108D11 /* SimpleFRPBindings */;
 			targetProxy = 8B8B534C1AF1FC5800108D11 /* PBXContainerItemProxy */;
 		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		8B8B53441AF1FC5800108D11 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8B8B53451AF1FC5800108D11 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
+		8B8B536D1AF1FD5900108D11 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SimpleSwiftFRP;
+			targetProxy = 8B8B536C1AF1FD5900108D11 /* PBXContainerItemProxy */;
 		};
-/* End PBXVariantGroup section */
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8B8B53531AF1FC5900108D11 /* Debug */ = {
@@ -396,6 +468,7 @@
 				8B8B53571AF1FC5900108D11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8B8B53581AF1FC5900108D11 /* Build configuration list for PBXNativeTarget "SimpleFRPBindingsTests" */ = {
 			isa = XCConfigurationList;
@@ -404,6 +477,7 @@
 				8B8B535A1AF1FC5900108D11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
