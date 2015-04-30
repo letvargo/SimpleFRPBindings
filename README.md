@@ -59,33 +59,31 @@ As you can see, none of the `@IBAction` methods do anything other than send a va
     final class MainViewLogic {
         
         // A single-case enum that represents a knock on the door.
-        enum Knock {
-            case Knock
-        }
+        enum Knock { case Knock }
         
         // An unowned reference to the view controller
         private unowned var controller: MainViewController
         
         // Declare and initialice the Sources. Note that there is one
         // Source for each control that will be sending a value.
-        let srcKnock = Source<Knock>()
-        let srcLightSwitch = Source<Int>()
-        let srcAtHome = Source<Int>()
+        let srcKnock                    = Source<Knock>()
+        let srcLightSwitch              = Source<Int>()
+        let srcAtHome                   = Source<Int>()
         
         // Declare and initialize the Streams
-        private let sKnockToShow = Stream<Bool>()
-        private let sLightToHide = Stream<Bool>()
-        private let sAtHomeToHide = Stream<Bool>()
+        private let sKnockToShow        = Stream<Bool>()
+        private let sLightToHide        = Stream<Bool>()
+        private let sAtHomeToHide       = Stream<Bool>()
         
         // Declare and initialize the Cells
-        private let cAtHome: Cell<Bool> = Cell(initialValue: true)
-        private let cLightsOn: Cell<Bool> = Cell(initialValue: false)
-        private let cShouldShowMessage: Cell<Bool> = Cell(initialValue: false)
-        private let cMessage: Cell<String> = Cell(initialValue: "")
+        private let cAtHome             = Cell(initialValue: true)
+        private let cLightsOn           = Cell(initialValue: false)
+        private let cShouldShowMessage  = Cell(initialValue: false)
+        private let cMessage            = Cell(initialValue: "")
         
         // Declare and initialize the Outlets
-        private let oEnableLights = Outlet<Bool>()
-        private let oSetMessage = Outlet<String>()
+        private let oEnableLights       = Outlet<Bool>()
+        private let oSetMessage         = Outlet<String>()
         
         // The init method
         init(controller: MainViewController) {
@@ -105,7 +103,7 @@ As you can see, none of the `@IBAction` methods do anything other than send a va
             
             srcAtHome
                 --^ (cAtHome, buttonStateToBool)
-                --< (oEnableLights, controller.setLightsEnabled)
+                    --< (oEnableLights, controller.setLightsEnabled)
             
             [
                 srcKnock
@@ -115,15 +113,15 @@ As you can see, none of the `@IBAction` methods do anything other than send a va
                 srcAtHome
                     >-- (sAtHomeToHide, returnHide)
             ]
-                    --& cShouldShowMessage
+                        --& cShouldShowMessage
             
             (
                 cShouldShowMessage,
                 cAtHome,
                 cLightsOn
             )
-                --^ (cMessage, messageToShow)
-                --< (oSetMessage, controller.setMessage)
+                    --^ (cMessage, messageToShow)
+                        --< (oSetMessage, controller.setMessage)
         }
     }
     
@@ -133,7 +131,7 @@ As you can see, none of the `@IBAction` methods do anything other than send a va
     // they operate on nothing other than the arguments passed to them.
     
     private let returnShow: MainViewLogic.Knock -> Bool = { _ in return true }
-    private let returnHide: Int -> Bool = { _ in return false }
+    private let returnHide: Int -> Bool                 = { _ in return false }
 
     private func buttonStateToBool(state: Int) -> Bool {
         if state == 1 {
