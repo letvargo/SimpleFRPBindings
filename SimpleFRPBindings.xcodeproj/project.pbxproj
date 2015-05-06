@@ -12,8 +12,20 @@
 		8B8B535E1AF1FCBC00108D11 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B8B535B1AF1FCBC00108D11 /* MainMenu.xib */; };
 		8B8B535F1AF1FCBC00108D11 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8B535C1AF1FCBC00108D11 /* MainViewController.swift */; };
 		8B8B53601AF1FCBC00108D11 /* MainViewLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8B535D1AF1FCBC00108D11 /* MainViewLogic.swift */; };
-		8B8B536A1AF1FD5900108D11 /* SimpleSwiftFRP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8B53671AF1FD5200108D11 /* SimpleSwiftFRP.framework */; };
-		8B8B536B1AF1FD5900108D11 /* SimpleSwiftFRP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8B53671AF1FD5200108D11 /* SimpleSwiftFRP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8BE138951AF9D3C6004DD081 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE138861AF9D3C6004DD081 /* Cell.swift */; };
+		8BE138961AF9D3C6004DD081 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE138871AF9D3C6004DD081 /* Filter.swift */; };
+		8BE138971AF9D3C6004DD081 /* FilterNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE138881AF9D3C6004DD081 /* FilterNil.swift */; };
+		8BE138981AF9D3C6004DD081 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE138891AF9D3C6004DD081 /* Globals.swift */; };
+		8BE138991AF9D3C6004DD081 /* Lift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE1388A1AF9D3C6004DD081 /* Lift.swift */; };
+		8BE1389A1AF9D3C6004DD081 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE1388B1AF9D3C6004DD081 /* Map.swift */; };
+		8BE1389B1AF9D3C6004DD081 /* Merge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE1388C1AF9D3C6004DD081 /* Merge.swift */; };
+		8BE1389C1AF9D3C6004DD081 /* ObserverSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE1388D1AF9D3C6004DD081 /* ObserverSet.swift */; };
+		8BE1389D1AF9D3C6004DD081 /* Outlet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE1388E1AF9D3C6004DD081 /* Outlet.swift */; };
+		8BE1389E1AF9D3C6004DD081 /* Output.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE1388F1AF9D3C6004DD081 /* Output.swift */; };
+		8BE1389F1AF9D3C6004DD081 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE138901AF9D3C6004DD081 /* Protocols.swift */; };
+		8BE138A01AF9D3C6004DD081 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE138911AF9D3C6004DD081 /* Result.swift */; };
+		8BE138A11AF9D3C6004DD081 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE138931AF9D3C6004DD081 /* Source.swift */; };
+		8BE138A21AF9D3C6004DD081 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE138941AF9D3C6004DD081 /* Stream.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,42 +36,7 @@
 			remoteGlobalIDString = 8B8B533A1AF1FC5800108D11;
 			remoteInfo = SimpleFRPBindings;
 		};
-		8B8B53661AF1FD5200108D11 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8B8B53611AF1FD5200108D11 /* SimpleSwiftFRP.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8BB3E6CA1AD6232A00E90CFF;
-			remoteInfo = SimpleSwiftFRP;
-		};
-		8B8B53681AF1FD5200108D11 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8B8B53611AF1FD5200108D11 /* SimpleSwiftFRP.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8BB3E6D51AD6232B00E90CFF;
-			remoteInfo = SimpleSwiftFRPTests;
-		};
-		8B8B536C1AF1FD5900108D11 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8B8B53611AF1FD5200108D11 /* SimpleSwiftFRP.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8BB3E6C91AD6232A00E90CFF;
-			remoteInfo = SimpleSwiftFRP;
-		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		8B8B536E1AF1FD5A00108D11 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				8B8B536B1AF1FD5900108D11 /* SimpleSwiftFRP.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8B8B533B1AF1FC5800108D11 /* SimpleFRPBindings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleFRPBindings.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,7 +48,21 @@
 		8B8B535B1AF1FCBC00108D11 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		8B8B535C1AF1FCBC00108D11 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8B8B535D1AF1FCBC00108D11 /* MainViewLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewLogic.swift; sourceTree = "<group>"; };
-		8B8B53611AF1FD5200108D11 /* SimpleSwiftFRP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SimpleSwiftFRP.xcodeproj; path = ../SimpleSwiftFRP/SimpleSwiftFRP.xcodeproj; sourceTree = "<group>"; };
+		8BE138861AF9D3C6004DD081 /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cell.swift; path = SimpleSwiftFRP/Cell.swift; sourceTree = "<group>"; };
+		8BE138871AF9D3C6004DD081 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = SimpleSwiftFRP/Filter.swift; sourceTree = "<group>"; };
+		8BE138881AF9D3C6004DD081 /* FilterNil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilterNil.swift; path = SimpleSwiftFRP/FilterNil.swift; sourceTree = "<group>"; };
+		8BE138891AF9D3C6004DD081 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Globals.swift; path = SimpleSwiftFRP/Globals.swift; sourceTree = "<group>"; };
+		8BE1388A1AF9D3C6004DD081 /* Lift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lift.swift; path = SimpleSwiftFRP/Lift.swift; sourceTree = "<group>"; };
+		8BE1388B1AF9D3C6004DD081 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Map.swift; path = SimpleSwiftFRP/Map.swift; sourceTree = "<group>"; };
+		8BE1388C1AF9D3C6004DD081 /* Merge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Merge.swift; path = SimpleSwiftFRP/Merge.swift; sourceTree = "<group>"; };
+		8BE1388D1AF9D3C6004DD081 /* ObserverSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObserverSet.swift; path = SimpleSwiftFRP/ObserverSet.swift; sourceTree = "<group>"; };
+		8BE1388E1AF9D3C6004DD081 /* Outlet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Outlet.swift; path = SimpleSwiftFRP/Outlet.swift; sourceTree = "<group>"; };
+		8BE1388F1AF9D3C6004DD081 /* Output.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Output.swift; path = SimpleSwiftFRP/Output.swift; sourceTree = "<group>"; };
+		8BE138901AF9D3C6004DD081 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = SimpleSwiftFRP/Protocols.swift; sourceTree = "<group>"; };
+		8BE138911AF9D3C6004DD081 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Result.swift; path = SimpleSwiftFRP/Result.swift; sourceTree = "<group>"; };
+		8BE138921AF9D3C6004DD081 /* SimpleSwiftFRP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleSwiftFRP.h; path = SimpleSwiftFRP/SimpleSwiftFRP.h; sourceTree = "<group>"; };
+		8BE138931AF9D3C6004DD081 /* Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Source.swift; path = SimpleSwiftFRP/Source.swift; sourceTree = "<group>"; };
+		8BE138941AF9D3C6004DD081 /* Stream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stream.swift; path = SimpleSwiftFRP/Stream.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +70,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B8B536A1AF1FD5900108D11 /* SimpleSwiftFRP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,10 +83,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B49204E1AF9CE64009A4D6C /* SimpleSwiftFRP */ = {
+			isa = PBXGroup;
+			children = (
+				8BE138861AF9D3C6004DD081 /* Cell.swift */,
+				8BE138871AF9D3C6004DD081 /* Filter.swift */,
+				8BE138881AF9D3C6004DD081 /* FilterNil.swift */,
+				8BE138891AF9D3C6004DD081 /* Globals.swift */,
+				8BE1388A1AF9D3C6004DD081 /* Lift.swift */,
+				8BE1388B1AF9D3C6004DD081 /* Map.swift */,
+				8BE1388C1AF9D3C6004DD081 /* Merge.swift */,
+				8BE1388D1AF9D3C6004DD081 /* ObserverSet.swift */,
+				8BE1388E1AF9D3C6004DD081 /* Outlet.swift */,
+				8BE1388F1AF9D3C6004DD081 /* Output.swift */,
+				8BE138901AF9D3C6004DD081 /* Protocols.swift */,
+				8BE138911AF9D3C6004DD081 /* Result.swift */,
+				8BE138921AF9D3C6004DD081 /* SimpleSwiftFRP.h */,
+				8BE138931AF9D3C6004DD081 /* Source.swift */,
+				8BE138941AF9D3C6004DD081 /* Stream.swift */,
+			);
+			name = SimpleSwiftFRP;
+			sourceTree = "<group>";
+		};
 		8B8B53321AF1FC5800108D11 = {
 			isa = PBXGroup;
 			children = (
-				8B8B53611AF1FD5200108D11 /* SimpleSwiftFRP.xcodeproj */,
 				8B8B533D1AF1FC5800108D11 /* SimpleFRPBindings */,
 				8B8B534E1AF1FC5800108D11 /* SimpleFRPBindingsTests */,
 				8B8B533C1AF1FC5800108D11 /* Products */,
@@ -115,6 +126,7 @@
 		8B8B533D1AF1FC5800108D11 /* SimpleFRPBindings */ = {
 			isa = PBXGroup;
 			children = (
+				8B49204E1AF9CE64009A4D6C /* SimpleSwiftFRP */,
 				8B8B535C1AF1FCBC00108D11 /* MainViewController.swift */,
 				8B8B535D1AF1FCBC00108D11 /* MainViewLogic.swift */,
 				8B8B535B1AF1FCBC00108D11 /* MainMenu.xib */,
@@ -149,15 +161,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8B8B53621AF1FD5200108D11 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8B8B53671AF1FD5200108D11 /* SimpleSwiftFRP.framework */,
-				8B8B53691AF1FD5200108D11 /* SimpleSwiftFRPTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -168,12 +171,10 @@
 				8B8B53371AF1FC5800108D11 /* Sources */,
 				8B8B53381AF1FC5800108D11 /* Frameworks */,
 				8B8B53391AF1FC5800108D11 /* Resources */,
-				8B8B536E1AF1FD5A00108D11 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8B8B536D1AF1FD5900108D11 /* PBXTargetDependency */,
 			);
 			name = SimpleFRPBindings;
 			productName = SimpleFRPBindings;
@@ -227,12 +228,6 @@
 			mainGroup = 8B8B53321AF1FC5800108D11;
 			productRefGroup = 8B8B533C1AF1FC5800108D11 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 8B8B53621AF1FD5200108D11 /* Products */;
-					ProjectRef = 8B8B53611AF1FD5200108D11 /* SimpleSwiftFRP.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				8B8B533A1AF1FC5800108D11 /* SimpleFRPBindings */,
@@ -240,23 +235,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		8B8B53671AF1FD5200108D11 /* SimpleSwiftFRP.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SimpleSwiftFRP.framework;
-			remoteRef = 8B8B53661AF1FD5200108D11 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8B8B53691AF1FD5200108D11 /* SimpleSwiftFRPTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SimpleSwiftFRPTests.xctest;
-			remoteRef = 8B8B53681AF1FD5200108D11 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8B8B53391AF1FC5800108D11 /* Resources */ = {
@@ -282,8 +260,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BE1389C1AF9D3C6004DD081 /* ObserverSet.swift in Sources */,
+				8BE1389B1AF9D3C6004DD081 /* Merge.swift in Sources */,
+				8BE138971AF9D3C6004DD081 /* FilterNil.swift in Sources */,
+				8BE138A21AF9D3C6004DD081 /* Stream.swift in Sources */,
 				8B8B53601AF1FCBC00108D11 /* MainViewLogic.swift in Sources */,
+				8BE138A01AF9D3C6004DD081 /* Result.swift in Sources */,
+				8BE1389E1AF9D3C6004DD081 /* Output.swift in Sources */,
+				8BE1389A1AF9D3C6004DD081 /* Map.swift in Sources */,
+				8BE138981AF9D3C6004DD081 /* Globals.swift in Sources */,
+				8BE138A11AF9D3C6004DD081 /* Source.swift in Sources */,
+				8BE1389D1AF9D3C6004DD081 /* Outlet.swift in Sources */,
+				8BE138991AF9D3C6004DD081 /* Lift.swift in Sources */,
+				8BE1389F1AF9D3C6004DD081 /* Protocols.swift in Sources */,
+				8BE138961AF9D3C6004DD081 /* Filter.swift in Sources */,
 				8B8B535F1AF1FCBC00108D11 /* MainViewController.swift in Sources */,
+				8BE138951AF9D3C6004DD081 /* Cell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,11 +294,6 @@
 			isa = PBXTargetDependency;
 			target = 8B8B533A1AF1FC5800108D11 /* SimpleFRPBindings */;
 			targetProxy = 8B8B534C1AF1FC5800108D11 /* PBXContainerItemProxy */;
-		};
-		8B8B536D1AF1FD5900108D11 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SimpleSwiftFRP;
-			targetProxy = 8B8B536C1AF1FD5900108D11 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

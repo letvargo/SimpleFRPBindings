@@ -1,6 +1,6 @@
 ////
-////  ButtonLogic.swift
-////  FRPBindingExample
+////  MainViewController.swift
+////  SimpleFRPBindings
 ////
 ////  Created by developer on 4/5/15.
 ////  Copyright (c) 2015 letvargo. All rights reserved.
